@@ -347,7 +347,7 @@ h2 {
 
 .img_frame {
 	border: 5px solid #c8c6bc;
-    -webkit-transition: border 0.2s linear;
+    -webkit-transition: border 0.2s ease-in;
 }
 
 .img_frame:hover {
