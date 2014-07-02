@@ -1,87 +1,88 @@
 <!DOCTYPE html>
 <html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/jquery-1.11.0.min.js"></script>
+		<link rel="stylesheet" href="css/normalize.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		<script src="js/vendor/jquery-1.11.0.min.js"></script>
 
-        <!-- bxSlider Javascript file -->
-        <!-- bxSlider Javascript file -->
-        <script src="js/jquery.bxslider.min.js"></script>
-        <link href="lib/jquery.bxslider.css" rel="stylesheet" />
-        <script>
+		<!-- bxSlider Javascript file -->
+		<!-- bxSlider Javascript file -->
+		<script src="js/jquery.bxslider.min.js"></script>
+		<link href="lib/jquery.bxslider.css" rel="stylesheet" />
+		<script>
 
-        $(document).ready(function(){
+			$(document).ready(function(){
 
-          // setup slider
-          slider = $('.bxslider').bxSlider({
-            pager: false,
-            adaptiveHeight: true
-          });
+				// setup slider
+				slider = $('.bxslider').bxSlider({
+					pager: false,
+					adaptiveHeight: true,
+					controls: false
+				});
 
-          // custom key presses for slider
-          $(document).keydown(function(key) {
-            var keyPressed = parseInt(key.which,10);
-            if (keyPressed === 37) {
-              slider.goToPrevSlide();
-            }
-            else if (keyPressed === 39) {
-              slider.goToNextSlide();
-            }
-          });
+				// custom key presses for slider
+				$(document).keydown(function(key) {
+					var keyPressed = parseInt(key.which,10);
+					if (keyPressed === 37) {
+						slider.goToPrevSlide();
+					}
+					else if (keyPressed === 39) {
+						slider.goToNextSlide();
+					}
+				});
 
-          //custom controls:
-          $('#next').click(function() {
-            slider.goToNextSlide();
-          });
+				//custom controls:
+				$('#next').click(function() {
+					slider.goToNextSlide();
+				});
 
-          $('#prev').click(function() {
-            slider.goToPrevSlide();
-          });
+				$('#prev').click(function() {
+					slider.goToPrevSlide();
+				});
 
 
-        });
-        </script>
-        <!-- bxSlider Javascript file -->
-        <!-- bxSlider Javascript file -->
-    </head>
-    <body>
-        <div class="wrapper">
+			});
+    </script>
+		<!-- bxSlider Javascript file -->
+		<!-- bxSlider Javascript file -->
+	</head>
+	<body>
+		<div class="wrapper">
 
-            <header class="left_bar">
-                <a href="http://www.simaoneves.com" target="_self" class="logo">
-                    <img src="img/simao_neves_logo.png" alt="Simão Neves">
-                </a>
-                <nav>
-                    <ul class="navigation">
-                        <li class="area"><a href="">Home</a></li>
-                        <li class="area"><a href="" class="active">About me</a></li>
-                        <li class="area"><a href="">Work</a></li>
-                        <li class="area"><a href="">Blog</a></li>
-                        <li class="area"><a href="">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="copy">© Copyright 2014</div>
-            </header>
+			<header class="left_bar">
+				<a href="http://www.simaoneves.com" target="_self" class="logo">
+					<img src="img/simao_neves_logo.png" alt="Simão Neves">
+				</a>
+				<nav>
+					<ul class="navigation">
+						<li><a href="">Home</a></li>
+						<li><a href="" class="active">About me</a></li>
+						<li><a href="">Work</a></li>
+						<li><a href="">Blog</a></li>
+						<li><a href="">Contact</a></li>
+					</ul>
+				</nav>
+				<div class="copy">© Copyright 2014</div>
+			</header>
 
-            <div class="right_content">
-            	<section class="inside_content">
+			<div class="right_content">
+				<section class="inside_content">
 
-            		<header class="content_header">
-            			<h1>Hello there</h1>
-          				<a target="_blank" href="" class="social_min_img facebook_min"></a>
-          				<a target="_blank" href="" class="social_min_img github_min"></a>
-          				<a target="_blank" href="" class="social_min_img linkedin_min"></a>
-						      <a target="_blank" href="" class="social_min_img twitter_min"></a>
-          				<a target="_blank" href="" class="social_min_img forrst_min"></a>
-          				<a target="_blank" href="" class="social_min_img rss_min"></a>
-            		</header>
+					<header class="content_header">
+						<h1>Hello there</h1>
+						<a target="_blank" href="" class="social_min_img facebook_min"></a>
+						<a target="_blank" href="" class="social_min_img github_min"></a>
+						<a target="_blank" href="" class="social_min_img linkedin_min"></a>
+						<a target="_blank" href="" class="social_min_img twitter_min"></a>
+						<a target="_blank" href="" class="social_min_img forrst_min"></a>
+						<a target="_blank" href="" class="social_min_img rss_min"></a>
+					</header>
 
 					<div class="content">
 
@@ -241,27 +242,27 @@
 
 						<div class="one_col section">
 							<h2>I'm Simão Neves</h2>
-				            <div class="resp_img">
-				                <div class="img_frame">
-				                  <img src="img/random_img.jpg" alt="Simão Neves" class="resp_img">
-				                </div>
-				            </div>
+								<div class="resp_img">
+									<div class="img_frame">
+										<img src="img/random_img.jpg" alt="Simão Neves" class="resp_img">
+									</div>
+								</div>
 						</div>
 
 						<div class="one_col section">
-              <div class="img_frame">
-                <ul class="bxslider">
-                  <li><a href="#"><img src="img/ritasimao.jpg" alt="Simão Neves"></a></li>
-                  <li><a href="#"><img src="img/random_img.jpg" alt="Simão Neves"></a></li>
-                  <li><a href="#"><img src="img/ritasimao.jpg" alt="Simão Neves"></a></li>
-
-                </ul>
-              </div>
+							<div class="img_frame relative">
+								<ul class="bxslider">
+									<li><a href="#"><img src="img/ritasimao.jpg" alt="Simão Neves"></a></li>
+									<li><a href="#"><img src="img/random_img.jpg" alt="Simão Neves"></a></li>
+									<li><a href="#"><img src="img/ritasimao.jpg" alt="Simão Neves"></a></li>
+								</ul>
+								<div id="next" class="sliderBtn"></div>
+								<div id="prev" class="sliderBtn"></div>
+							</div>
 						</div>
-            <!-- Custom buttons for slider controls
-            <button id="next">Next</button>
-            <button id="prev">Prev</button>
-            -->
+
+						
+
 						<div class="double_col section">
 							<h2 class="absolute">I'm Simão Neves</h2>
 							<h2 class="double_title">Details</h2>
@@ -331,11 +332,10 @@
 								<div class="clear"></div>
 							</div>
 						</div>
+						
 					</div>
-
-            	</section>
-            </div>
-        </div>
-
-    </body>
+				</section>
+			</div>
+		</div>
+	</body>
 </html>
