@@ -750,10 +750,13 @@ input[type="submit"] {
 
 .mobile {
     display: none;
+    float: right;
+    width: 400px;
 }
 
-nav.mobile .navigation li {
+nav.mobile .navigation_mobile li {
     font-size: 14px;
+    line-height: 29px;
     color: #c8c6bc;
     font-family: Georgia;
     padding: 0px 10px;
@@ -765,17 +768,18 @@ nav.mobile .navigation li {
     margin-left: 5px;
 }
 
-nav.mobile .navigation li a {
+nav.mobile .navigation_mobile li a {
     text-decoration: none;
     color: #d5d5d4;
     font-size: 1em; /* 40/14 = 2.857142857 */
     line-height: 1.4em;
 }
 
-nav.mobile .navigation li a:hover {
+nav.mobile .navigation_mobile li a:hover {
     color: #ffffff;
 }
 
-nav.mobile .navigation {
+nav.mobile .navigation_mobile {
     display: block;
+    margin: 0px;
 }
