@@ -195,7 +195,7 @@ textarea {
 }
 
 /* One col mode */
-@media only screen and (max-width: 950px) and (min-width: 600px) {
+@media only screen and (max-width: 950px) and (min-width: 600px), (max-width: 600px) {
 
     div.section div.vert_bar {
         background: none;
@@ -208,6 +208,44 @@ textarea {
 
     div.section div.right_col {
         width: 100%;
+    }
+
+    div.section div.free_img {
+        width: 45.9580838%; /* 307/668 = 45.9580838% */ /* menos 10px porcausa dos acertos */
+    }
+
+    div.section div.free_img img{
+        margin-right: 25px;
+        margin-bottom: 20px;
+    }
+
+    .work_list_img {
+        width: 100%; /* 241/668 = 36.0778443% */
+        float: none;
+    }
+
+
+    .left_work {
+        width: 58.6826347%; /* 392/668 = 58.6826347% */
+    }
+
+    .img_container {
+        width: 95.8506224%; /* 231/241 = 95.8506224% */ /* menos 10px porcausa de ajust com border */
+    }
+
+    div.work div.work_list_img {
+        width: 100%; /* 241/668 = 36.0778443% */
+        float: none;
+    }
+
+
+    div.work div.left_work {
+        width: 100%; /* 392/668 = 58.6826347% */
+    }
+
+    div.work div.img_container {
+        width: 95.8506224%; /* 231/241 = 95.8506224% */ /* menos 10px porcausa de ajust com border */
+        margin-bottom: 15px;
     }
 }
 
@@ -228,23 +266,17 @@ textarea {
         float: right;
         width: 47.4550898%; /* 317/668 = 47.4550898% */
     }
+
 }
 
-/* One col mode */
-@media only screen and (max-width: 600px) {
+/* Arrange copy because of height */
+@media only screen and (max-height: 630px) {
 
-    div.section div.vert_bar {
-        background: none;
+    header.left_bar div.copy {
+        position: relative;
+        margin-top: 100px;
     }
 
-    div.section div.left_col {
-        width: 100%;
-        margin-bottom: 17px;
-    }
-
-    div.section div.right_col {
-        width: 100%;
-    }
 }
 
 /* ==========================================================================
@@ -711,6 +743,7 @@ a.forrst_min:hover {
 
 .work_list_img {
 	width: 36.0778443%; /* 241/668 = 36.0778443% */
+    float: right;
 }
 
 
