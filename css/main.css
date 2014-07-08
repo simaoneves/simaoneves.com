@@ -118,7 +118,7 @@ textarea {
     }
 
     div.right_content {
-        position: static;
+        position: relative;
         margin-left: 0px;
         margin-top: 0px;
         height: 100%;
@@ -190,10 +190,61 @@ textarea {
     }
 
     section.inside_content {
-        padding: 63px 44px; /* Mudar */
+        padding: 44px 22px; /* Mudar */
+    }
+}
+
+/* One col mode */
+@media only screen and (max-width: 950px) and (min-width: 600px) {
+
+    div.section div.vert_bar {
+        background: none;
     }
 
+    div.section div.left_col {
+        width: 100%;
+        margin-bottom: 17px;
+    }
 
+    div.section div.right_col {
+        width: 100%;
+    }
+}
+
+/* Two col mode */
+@media only screen and (max-width: 768px) and (min-width: 600px) {
+
+    div.section div.vert_bar {
+        /* width: 683px; responsive layout! */
+        background: url('../img/vert_bar.png') repeat-y top center;
+    }
+
+    div.section div.left_col {
+        float: left;
+        width: 47.4550898%; /* 317/668 = 47.4550898% */
+    }
+
+    div.section div.right_col {
+        float: right;
+        width: 47.4550898%; /* 317/668 = 47.4550898% */
+    }
+}
+
+/* One col mode */
+@media only screen and (max-width: 600px) {
+
+    div.section div.vert_bar {
+        background: none;
+    }
+
+    div.section div.left_col {
+        width: 100%;
+        margin-bottom: 17px;
+    }
+
+    div.section div.right_col {
+        width: 100%;
+    }
 }
 
 /* ==========================================================================
@@ -497,15 +548,6 @@ div.img_frame.relative:hover {
 
 .double_col {
 
-}
-
-.double_title {
-	float: left;
-	margin-left: 52.5449102%; /* 351/668 = 52.5449102% */
-}
-
-.absolute {
-	position: absolute;
 }
 
 .fl {
