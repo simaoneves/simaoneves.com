@@ -6,6 +6,9 @@ input,
 select,
 textarea {
     color: #222;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
 }
 
 html {
@@ -709,7 +712,7 @@ nav.mobile .navigation_mobile {
     nav {
         margin-left: auto;
         margin-right: auto;
-        width: 420px;
+        width: 450px;
         height: 50px;
         position: relative;
         top: 0px;
@@ -840,7 +843,7 @@ nav.mobile .navigation_mobile {
 
 }
 
-/* Arrange copy because of height */
+/* Arrange copyright because of height */
 @media only screen and (max-height: 630px) {
 
     header.left_bar div.copy {
