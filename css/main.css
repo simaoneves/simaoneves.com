@@ -639,6 +639,51 @@ nav.mobile .navigation_mobile {
     margin: 0px;
 }
 
+.timeline_wrapper {
+    height: 100%;
+    position: relative;
+}
+
+.timeline {
+    width: 5px;
+    height: 100%;
+    display: block;
+    position: absolute;
+    background-color: #c8c6bc;
+    left: 73px;
+}
+
+.post_list {
+    list-style: none;
+    width: 100%;
+    margin: 0px;
+}
+
+.post {
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.post:last-child {
+    margin-bottom: 0px;
+}
+
+.post_details {
+    position: relative;
+    margin-left: 90px;
+}
+
+.time {
+    position: absolute;
+    top: 50%;
+    color: #61594b;
+    background-color: #c8c6bc;
+    font-size: 20px;
+    padding: 5px;
+    padding-right: 28px;
+    font-family: 'alternategothic2_btregular';
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -853,7 +898,7 @@ nav.mobile .navigation_mobile {
 
 }
 
-/* Arrange navigation and display none social */
+/* Arrange navigation and display none to social, arrange posts */
 @media only screen and (max-width: 450px) {
 
     header.content_header a.social_min_img {
@@ -874,6 +919,19 @@ nav.mobile .navigation_mobile {
 
     nav ul.navigation li a {
         font-size: 2.0em;
+    }
+
+    .timeline {
+        left: 50px;
+    }
+
+    .post_details {
+        position: relative;
+        margin-left: 67px;
+    }
+
+    .time {
+        padding-right: 5px;
     }
 
 }
