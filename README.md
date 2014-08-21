@@ -1,10 +1,11 @@
 simaoneves.com
 ==============
 
-WIP simaoneves.com Website
+Source code for my future website.
+
+Technologies used:
+
 
 TODO:
 -----
-- Responsive Layout
 - Pages with PHP includes
-- Back-end with Bootstrap

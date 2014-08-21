@@ -1,15 +1,15 @@
 # humanstxt.org/
-# The humans responsible & technology colophon
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Simão Neves -- Design and Development -- @simaoneves
 
 # THANKS
 
-    <name>
+    The whole freaking Internet! Without it i would not be able to do it!
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
     jQuery, Modernizr
+    PHP

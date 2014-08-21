@@ -12,45 +12,11 @@
 		<script src="js/vendor/jquery-1.11.0.min.js"></script>
 
 		<!-- bxSlider Javascript file -->
-		<!-- bxSlider Javascript file -->
 		<script src="js/jquery.bxslider.min.js"></script>
 		<link href="lib/jquery.bxslider.css" rel="stylesheet" />
-		<script>
 
-			$(document).ready(function(){
-
-				// setup slider
-				slider = $('.bxslider').bxSlider({
-					pager: false,
-					adaptiveHeight: true,
-					controls: false
-				});
-
-				// custom key presses for slider
-				$(document).keydown(function(key) {
-					var keyPressed = parseInt(key.which,10);
-					if (keyPressed === 37) {
-						slider.goToPrevSlide();
-					}
-					else if (keyPressed === 39) {
-						slider.goToNextSlide();
-					}
-				});
-
-				//custom controls:
-				$('#next').click(function() {
-					slider.goToNextSlide();
-				});
-
-				$('#prev').click(function() {
-					slider.goToPrevSlide();
-				});
-
-
-			});
-    </script>
-		<!-- bxSlider Javascript file -->
-		<!-- bxSlider Javascript file -->
+		<!-- Put only in work detail pages -->
+		<script src="js/sliderSetup.js"></script>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -69,6 +35,7 @@
 							<li><a href="">Contact</a></li>
 						</ul>
 					</nav>
+					<!-- Change year to PHP so that it's always currrent -->
 					<div class="copy">© Copyright 2014</div>
 				</div>
 			</header>
