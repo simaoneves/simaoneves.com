@@ -341,6 +341,10 @@ div.img_frame.relative:hover {
 	width: 47.4550898%; /* 317/668 = 47.4550898% */
 }
 
+.left_col p {
+    margin-bottom: 10px;
+}
+
 .right_col {
 	float: right;
 	width: 47.4550898%; /* 317/668 = 47.4550898% */
@@ -443,60 +447,107 @@ a.social_min_img {
 	margin-left: 11px;
 	background: #c8c6bc url(../img/btnSprites.png) no-repeat;
     -webkit-transition: background-color 0.2s linear;
-    -moz-transition: background-color 0.1s linear;
-    -o-transition: background-color 0.1s linear;
+    -moz-transition: background-color 0.2s linear;
+    -o-transition: background-color 0.2s linear;
 }
 
-a.social_min_img:hover {
+a.social_img {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 11px;
+    background: #c8c6bc url(../img/btnSprites.png) no-repeat;
+    -webkit-transition: background-color 0.2s linear;
+    -moz-transition: background-color 0.2s linear;
+    -o-transition: background-color 0.2s linear;
+}
+
+a.social_min_img:hover, a.social_img:hover {
     background-color: #61594b;
 }
 
+/* Facebook */
 a.facebook_min {
 	background-position: -240px 0px;
 }
-
+a.facebook {
+    background-position: 0px 0px;
+}
 a.facebook_min:hover {
 	background-position: -240px -40px;
 }
+a.facebook:hover {
+    background-position: 0px -40px;
+}
 
+/* Linkedin */
 a.linkedin_min {
 	background-position: -327px 0px;
 }
-
+a.linkedin {
+    background-position: -40px 0px;
+}
 a.linkedin_min:hover {
 	background-position: -327px -40px;
 }
+a.linkedin:hover {
+    background-position: -40px -40px;
+}
 
+/* RSS */
 a.rss_min {
 	background-position: -356px 0px;
 }
-
+a.rss {
+    background-position: -80px 0px;
+}
 a.rss_min:hover {
 	background-position: -356px -40px;
 }
+a.rss:hover {
+    background-position: -80px -40px;
+}
 
+/* Twitter */
 a.twitter_min {
 	background-position: -385px 0px;
 }
-
+a.twitter {
+    background-position: -120px 0px;
+}
 a.twitter_min:hover {
 	background-position: -385px -40px;
 }
+a.twitter:hover {
+    background-position: -120px -40px;
+}
 
+/* Github */
 a.github_min {
 	background-position: -298px 0px;
 }
-
+a.github {
+    background-position: -160px 0px;
+}
 a.github_min:hover {
 	background-position: -298px -40px;
 }
+a.github:hover {
+    background-position: -160px -40px;
+}
 
+/* Forrst */
 a.forrst_min {
 	background-position: -269px 0px;
 }
-
+a.forrst {
+    background-position: -200px 0px;
+}
 a.forrst_min:hover {
 	background-position: -269px -40px;
+}
+a.forrst:hover {
+    background-position: -200px -40px;
 }
 
 .free_img {
@@ -763,7 +814,7 @@ nav.mobile .navigation_mobile {
     nav {
         margin-left: auto;
         margin-right: auto;
-        width: 420px;
+        width: 430px;
         height: 50px;
         position: relative;
         top: 0px;
@@ -897,6 +948,10 @@ nav.mobile .navigation_mobile {
     }
     a.btn {
         margin-bottom: 0px;
+    }
+
+    a.social_img {
+        margin-bottom: 11px;
     }
 }
 
