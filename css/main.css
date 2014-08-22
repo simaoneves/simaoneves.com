@@ -197,10 +197,10 @@ textarea {
 
 @font-face {
     font-family: 'alternategothic2_btregular';
-    src: url('../altgot2n-webfont.eot');
-    src: url('../altgot2n-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../altgot2n-webfont.woff') format('woff'),
-         url('../altgot2n-webfont.ttf') format('truetype');
+    src: url('../fonts/altgot2n-webfont.eot');
+    src: url('../fonts/altgot2n-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/altgot2n-webfont.woff') format('woff'),
+         url('../fonts/altgot2n-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
