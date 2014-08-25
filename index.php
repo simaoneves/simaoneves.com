@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html class="no-js">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<?php require 'includes/header.php' ?>
 		<title></title>
 		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="">
 
-		<link rel="stylesheet" href="css/normalize.min.css">
-		<link rel="stylesheet" href="css/main.css">
 		<script src="js/vendor/jquery-1.11.0.min.js"></script>
 
 		<!-- bxSlider links -->
@@ -17,31 +11,11 @@
 
 		<!-- Put only in work detail pages -->
 		<script src="js/sliderSetup.js"></script>
-	</head>
-	<body>
-		<div class="wrapper">
 
-			<header class="left_bar">
-				<div class="inside_content_left">
-					<a href="http://www.simaoneves.com" target="_self" class="logo">
-						<img src="img/simao_neves_logo.png" alt="Simão Neves">
-					</a>
-					<nav>
-						<ul class="navigation">
-							<li><a href="">Home</a></li>
-							<li><a href="" class="active">About me</a></li>
-							<li><a href="">Work</a></li>
-							<li><a href="">Blog</a></li>
-							<li><a href="">Contact</a></li>
-						</ul>
-					</nav>
-					<!-- Change year to PHP so that it's always currrent -->
-					<div class="copy">© Copyright 2014</div>
-				</div>
-			</header>
+<?php require 'includes/after_header.php' ?>
 
-			<div class="right_content">
-				<section class="inside_content">
+		
+
 					<header class="content_header">
 						<h1>Hello there</h1>
 						<a target="_blank" href="" class="social_min_img facebook_min"></a>
@@ -108,11 +82,11 @@
 						<div class="work_list section">
 
 							<div class="work">
-								<h2 class="title_work_list">Codezone</h2>
+								<h2 class="title_work_list">Project 1</h2>
 								<div class="work_list_img">
 									<div class="img_container">
 										<a href="">
-											<img src="img/ritasimao.jpg" alt="Codezone" class="resp_img img_frame">
+											<img src="img/ritasimao.jpg" alt="name" class="resp_img img_frame">
 										</a>
 									</div>
 								</div>
@@ -133,11 +107,11 @@
 							</div>
 
 							<div class="work">
-								<h2 class="title_work_list">Codezone</h2>
+								<h2 class="title_work_list">Project 2</h2>
 								<div class="work_list_img fr">
 									<div class="img_container">
 										<a href="">
-											<img src="img/simao_neves.jpg" alt="Codezone" class="resp_img img_frame">
+											<img src="img/simao_neves.jpg" alt="name" class="resp_img img_frame">
 										</a>
 									</div>
 								</div>
@@ -158,10 +132,10 @@
 							</div>
 
 							<div class="work">
-								<h2 class="title_work_list">Codezone</h2>
+								<h2 class="title_work_list">Project 3</h2>
 								<div class="work_list_img fr">
 									<div class="img_container">
-										<img src="img/rSXgQ2s.jpg" alt="Codezone" class="resp_img img_frame">
+										<img src="img/rSXgQ2s.jpg" alt="name" class="resp_img img_frame">
 									</div>
 								</div>
 								<div class="left_work">
@@ -289,13 +263,13 @@
 								<div class="right_col">
 									<form action="">
 										<label>Your name:</label>
-										<input type="text" name="name" class="input_style">
+										<input id="name" type="text" name="name" class="input_style">
 
 										<label>Your email:</label><br>
-										<input type="email" name="email" class="input_style" required>
+										<input id="email" type="email" name="email" class="input_style" required>
 
 										<label>Your message:</label><br>
-										<textarea name="message" rows="4" class="input_style" required></textarea>
+										<textarea id="message" name="message" rows="4" class="input_style" required></textarea>
 
 										<input type="submit" class="btn">
 									</form>
@@ -385,10 +359,5 @@
 								</li>
 							</ul>
 						</div>
-
 					</div>
-				</section>
-			</div>
-		</div>
-	</body>
-</html>
+<?php require 'includes/end.php' ?>
