@@ -1,20 +1,10 @@
 <?php require 'includes/header.php' ?>
-		<title></title>
+
+		<title>Blog list</title>
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 
-		<script src="js/vendor/jquery-1.11.0.min.js"></script>
-
-		<!-- bxSlider links -->
-		<script src="js/jquery.bxslider.min.js"></script>
-		<link href="css/jquery.bxslider.css" rel="stylesheet" />
-
-		<!-- Put only in work detail pages -->
-		<script src="js/sliderSetup.js"></script>
-
 <?php require 'includes/after_header.php' ?>
-
-		
 
 					<header class="content_header">
 						<h1>Blog list</h1>

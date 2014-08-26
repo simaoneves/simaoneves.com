@@ -12,5 +12,4 @@ Technologies used:
 
 TODO:
 -----
-- Pages with PHP includes
 - Get content

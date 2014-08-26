@@ -1,20 +1,10 @@
 <?php require 'includes/header.php' ?>
-		<title></title>
+
+		<title>Work list</title>
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 
-		<script src="js/vendor/jquery-1.11.0.min.js"></script>
-
-		<!-- bxSlider links -->
-		<script src="js/jquery.bxslider.min.js"></script>
-		<link href="css/jquery.bxslider.css" rel="stylesheet" />
-
-		<!-- Put only in work detail pages -->
-		<script src="js/sliderSetup.js"></script>
-
 <?php require 'includes/after_header.php' ?>
-
-		
 
 					<header class="content_header">
 						<h1>Work list</h1>
@@ -34,7 +24,7 @@
 								<h2 class="title_work_list">Project 1</h2>
 								<div class="work_list_img">
 									<div class="img_container">
-										<a href="">
+										<a href="work_detail.php">
 											<img src="img/ritasimao.jpg" alt="name" class="resp_img img_frame">
 										</a>
 									</div>
@@ -49,7 +39,7 @@
 									ua.Ut enim ad minimr incididunt ut labore et dolore ma
 									enim ad minimod tempor incididunt ut labo..
 									<br>
-									<a target="_self" href="">Read more</a>
+									<a target="_self" href="work_detail.php">Read more</a>
 									</p>
 								</div>
 								<div class="clear"></div>
@@ -59,7 +49,7 @@
 								<h2 class="title_work_list">Project 2</h2>
 								<div class="work_list_img fr">
 									<div class="img_container">
-										<a href="">
+										<a href="work_detail.php">
 											<img src="img/simao_neves.jpg" alt="name" class="resp_img img_frame">
 										</a>
 									</div>
@@ -74,7 +64,7 @@
 									ua.Ut enim ad minimr incididunt ut labore et dolore ma
 									enim ad minimod tempor incididunt ut labo..
 									<br>
-									<a target="_self" href="">Read more</a>
+									<a target="_self" href="work_detail.php">Read more</a>
 									</p>
 								</div>
 								<div class="clear"></div>
@@ -84,7 +74,9 @@
 								<h2 class="title_work_list">Project 3</h2>
 								<div class="work_list_img fr">
 									<div class="img_container">
-										<img src="img/rSXgQ2s.jpg" alt="name" class="resp_img img_frame">
+										<a href="work_detail.php">
+											<img src="img/rSXgQ2s.jpg" alt="name" class="resp_img img_frame">
+										</a>
 									</div>
 								</div>
 								<div class="left_work">
@@ -97,7 +89,7 @@
 									ua.Ut enim ad minimr incididunt ut labore et dolore ma
 									enim ad minimod tempor incididunt ut labo..
 									<br>
-									<a target="_self" href="">Read more</a>
+									<a target="_self" href="work_detail.php">Read more</a>
 									</p>
 								</div>
 								<div class="clear"></div>
