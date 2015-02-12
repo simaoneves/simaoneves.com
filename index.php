@@ -1,8 +1,8 @@
 <?php require_once('init.php'); ?>
 <?php require 'includes/header.php' ?>
-    <title></title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <title>Simão Neves - Home</title>
+    <meta name="description" content="My personal website where you can find my information and projects!">
+    <meta name="keywords" content="Simão Neves, web developer, software engineer">
 
     <script src="js/vendor/jquery-1.11.0.min.js"></script>
 
@@ -26,16 +26,8 @@
               <h2>I'm Simão Neves</h2>
               <div class="vert_bar">
                 <div class="left_col">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipis
-                  icing elit, sed do eiusmod tempor incididunt ut la
-                  magna aliqua.Ut enim ad minim.Lorem ipsum dol
-                  or sit amet, consectetur adipisicing elit, sed do eiu
-                  tempor incididunt ut labore et dolore magna aliq
-                  ua.Ut enim ad minimnsectetur adipisicing elit, sed
-                  tempor incididunt ut labore et dolore magna aliq
-                  ua.Ut enim ad minimnsectetur adipisicing elit, se
-                  tempor incididunt ut labore et dolore magna aliq
-                  ua.Ut enim ad minim</p>
+                  <p>Hello there, my name is Simão Neves, born in 1988 and raised in Lisbon as long as i can remember.<br>
+                Ah, programming.. It all started in 2004 when i discovered that my T83-Plus could have programs made by me, wow! As far as i know it was a BASIC-ish programming language that you had to use, i first wrote my games/programs in a calculator! Badass programmer? Check!<br><a class="link" href="about_me.php">Read more</a></p>
                 </div>
                 <div class="right_col">
                   <div class="container_resp_img">

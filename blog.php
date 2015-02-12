@@ -1,9 +1,9 @@
 <?php require_once('init.php'); ?>
 <?php require 'includes/header.php' ?>
 
-  <title>Blog list</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Simão Neves - Blog list</title>
+  <meta name="description" content="My Blog, i might say good things, i might say bad things, you decide">
+  <meta name="keywords" content="Simão Neves, web developer, software engineer, blog">
 
 <?php require 'includes/after_header.php' ?>
 

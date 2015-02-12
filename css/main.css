@@ -216,14 +216,8 @@ body{
   -webkit-text-size-adjust: auto;
 }
 
-a {
-  text-decoration: none;
-  font-weight: normal;
-  color: #61594b;
-}
-
-a: {
-  text-decoration: none;
+a.link {
+  text-decoration: underline;
   font-weight: normal;
   color: #61594b;
 }
@@ -368,7 +362,7 @@ div.img_frame.relative:hover {
 
 .content {
   /* width: 683px; responsive layout! */
-  word-break: break-all;
+  
 }
 
 .vert_bar {
@@ -833,15 +827,13 @@ nav.mobile .navigation_mobile {
     left: 0px;
     bottom: 0px;
     right: 0px;
-
   }
 
   ul.navigation {
     position: relative;
     display: block;
     min-height: 50px;
-    margin: 0px;
-
+    margin: 0px auto;
   }
 
   ul.navigation li a.active {
@@ -849,12 +841,12 @@ nav.mobile .navigation_mobile {
   }
 
   ul.navigation li {
-    float: left;
+    display: inline;
+    text-align: center;
     margin-right: 20px;
   }
 
   ul.navigation li:last-child {
-    float: left;
     margin-right: 0px;
   }
 

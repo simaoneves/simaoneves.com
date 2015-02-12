@@ -27,9 +27,9 @@ if (!empty($_POST)) {
 ?>
 <?php require 'includes/header.php' ?>
     
-  <title>Contact me</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Simão Neves - Contact me</title>
+  <meta name="description" content="A way for you to contact me">
+  <meta name="keywords" content="Simão Neves, web developer, software engineer, contacts">
   <script src="js/contacts.js"></script>
 
 <?php require 'includes/after_header.php' ?>

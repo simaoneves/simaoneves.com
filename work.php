@@ -1,9 +1,18 @@
 <?php require_once('init.php'); ?>
 <?php require 'includes/header.php' ?>
+<?php
+  $all_projects = Project::getAll();
+  $names = '';
+  foreach ($all_projects as $current_project) {
+    if ($current_project->visible == 1) {
+      $names .= ', ' . $current_project->name;
+    }
+  }
+?>
 
-    <title>Work list</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <title>Simão Neves - Work list</title>
+    <meta name="description" content="All the the projects i've worked on recently">
+    <meta name="keywords" content="Simão Neves, web developer, software engineer<?= $names ?>">
 
 <?php require 'includes/after_header.php' ?>
 
@@ -19,7 +28,6 @@
               <div class="work_list section">
               <?php
 
-                $all_projects = Project::getAll();
                 foreach ($all_projects as $current_project) {
 
                   // If the project is visible

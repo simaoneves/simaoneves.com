@@ -28,8 +28,8 @@
                 $class = $file == "work.php" || $file == "work_detail.php" ? "class='active'" : '';
                 echo "<li><a $class href='work.php'>Work</a></li>";
 
-                $class = $file == "blog.php" ? "class='active'" : '';
-                echo "<li><a $class href='blog.php'>Blog</a></li>";
+                // $class = $file == "blog.php" ? "class='active'" : '';
+                // echo "<li><a $class href='blog.php'>Blog</a></li>";
 
                 $class = $file == "contacts.php" ? "class='active'" : '';
                 echo "<li><a $class href='contacts.php'>Contact</a></li>";

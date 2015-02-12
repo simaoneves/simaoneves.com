@@ -8,9 +8,9 @@
 
 <?php require 'includes/header.php' ?>
 
-    <title>Work detail</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <title>Simão Neves - Work - <?= $project->data()->name ?></title>
+    <meta name="description" content="All the information about the project <?= $project->data()->name ?>">
+    <meta name="keywords" content="Simão Neves, web developer, software engineer, <?= $project->data()->name . ', ' . $project->data()->tech_used ?>">
 
     <script src="js/vendor/jquery-1.11.0.min.js"></script>
 
@@ -72,7 +72,7 @@
                   <?php 
                     if (!$project->data()->produced_for == '') {
                       echo "<p><b>Produced for:</b><br>";
-                      echo "<a target='_blank' href='" . $project->data()->produced_for . "'>" . $project->data()->produced_for . "</a>";
+                      echo "<a target='_blank' class='link' href='" . $project->data()->produced_for . "'>" . $project->data()->produced_for . "</a>";
                       echo "</p>";
                     }
                   ?>
