@@ -15,8 +15,6 @@
 
 <?php require 'includes/after_header.php' ?>
 
-    
-
           <header class="content_header">
             <h1>Hello there</h1>
             <?php printSocial("_min") ?>
