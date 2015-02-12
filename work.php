@@ -1,3 +1,4 @@
+<?php require_once('init.php'); ?>
 <?php require 'includes/header.php' ?>
 
     <title>Work list</title>
@@ -8,92 +9,48 @@
 
           <header class="content_header">
             <h1>Work list</h1>
-            <a target="_blank" href="" class="social_min_img facebook_min"></a>
-            <a target="_blank" href="" class="social_min_img github_min"></a>
-            <a target="_blank" href="" class="social_min_img linkedin_min"></a>
-            <a target="_blank" href="" class="social_min_img twitter_min"></a>
-            <a target="_blank" href="" class="social_min_img forrst_min"></a>
-            <a target="_blank" href="" class="social_min_img rss_min"></a>
+            <?php printSocial("_min") ?>
           </header>
 
           <div class="content">
 
             <div class="work_list section">
 
-              <div class="work">
-                <h2 class="title_work_list">Project 1</h2>
-                <div class="work_list_img">
-                  <div class="img_container">
-                    <a href="work_detail.php">
-                      <img src="img/ritasimao.jpg" alt="name" class="resp_img img_frame">
-                    </a>
-                  </div>
-                </div>
-                <div class="left_work">
-                  <p><b>Website</b><br>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut
-                  enim ad minim.od tempotetur adipisicing elit, sed do eiu
-                  ua.Ut enim ad minimnsectetur adipisicing elit, sed
-                  tempor incididunt ut labore et dolore magna aliq
-                  ua.Ut enim ad minimr incididunt ut labore et dolore ma
-                  enim ad minimod tempor incididunt ut labo..
-                  <br>
-                  <a target="_self" href="work_detail.php">Read more</a>
-                  </p>
-                </div>
-                <div class="clear"></div>
-              </div>
+              <div class="work_list section">
+              <?php
 
-              <div class="work">
-                <h2 class="title_work_list">Project 2</h2>
-                <div class="work_list_img fr">
-                  <div class="img_container">
-                    <a href="work_detail.php">
-                      <img src="img/simao_neves.jpg" alt="name" class="resp_img img_frame">
-                    </a>
-                  </div>
-                </div>
-                <div class="left_work">
-                  <p><b>Website</b><br>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut
-                  enim ad minim.od tempotetur adipisicing elit, sed do eiu
-                  ua.Ut enim ad minimnsectetur adipisicing elit, sed
-                  tempor incididunt ut labore et dolore magna aliq
-                  ua.Ut enim ad minimr incididunt ut labore et dolore ma
-                  enim ad minimod tempor incididunt ut labo..
-                  <br>
-                  <a target="_self" href="work_detail.php">Read more</a>
-                  </p>
-                </div>
-                <div class="clear"></div>
-              </div>
+                $all_projects = Project::getAll();
+                foreach ($all_projects as $current_project) {
 
-              <div class="work">
-                <h2 class="title_work_list">Project 3</h2>
-                <div class="work_list_img fr">
-                  <div class="img_container">
-                    <a href="work_detail.php">
-                      <img src="img/rSXgQ2s.jpg" alt="name" class="resp_img img_frame">
-                    </a>
-                  </div>
-                </div>
-                <div class="left_work">
-                  <p><b>Website</b><br>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut
-                  enim Testing new branch adipisicing elit, sed do eiu
-                  ua.Ut enim ad minimnsectetur adipisicing elit, sed
-                  tempor incididunt ut labore et dolore magna aliq
-                  ua.Ut enim ad minimr incididunt ut labore et dolore ma
-                  enim ad minimod tempor incididunt ut labo..
-                  <br>
-                  <a target="_self" href="work_detail.php">Read more</a>
-                  </p>
-                </div>
-                <div class="clear"></div>
-              </div>
+                  // If the project is visible
+                  if ($current_project->visible == 1) {
+
+                    // Get first picture
+                    $current_project_photo = Project_Photo::getAll($current_project->id);
+                    $current_project_photo = $current_project_photo[0];
+
+                    echo "<div class='work'>";
+                      echo "<h2 class='title_work_list'>$current_project->name</h2>";
+                      echo "<div class='work_list_img'>";
+                        echo "<div class='img_container'>";
+                          echo "<a href='work_detail.php?project_id=$current_project->id'>";
+                            echo "<img src='backend/uploads/$current_project_photo->url' alt='$current_project_photo->keywords' class='resp_img img_frame'>";
+                          echo "</a>";
+                        echo "</div>";
+                      echo "</div>";
+                      echo "<div class='left_work'>";
+                        echo "<p><b>$current_project->type</b><br>";
+                        echo $current_project->description;
+                        echo "<br>";
+                        echo "<a target='_self' href='work_detail.php?project_id=$current_project->id'>Read more</a>";
+                        echo "</p>";
+                      echo "</div>";
+                      echo "<div class='clear'></div>";
+                    echo "</div>";
+                  }
+                }
+                
+              ?>
             </div>
 
           </div>

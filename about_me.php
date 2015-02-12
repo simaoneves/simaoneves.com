@@ -1,3 +1,4 @@
+<?php require_once('init.php'); ?>
 <?php require 'includes/header.php' ?>
 
   <title>About me</title>
@@ -8,12 +9,7 @@
 
           <header class="content_header">
             <h1>About me</h1>
-            <a target="_blank" href="" class="social_min_img facebook_min"></a>
-            <a target="_blank" href="" class="social_min_img github_min"></a>
-            <a target="_blank" href="" class="social_min_img linkedin_min"></a>
-            <a target="_blank" href="" class="social_min_img twitter_min"></a>
-            <a target="_blank" href="" class="social_min_img forrst_min"></a>
-            <a target="_blank" href="" class="social_min_img rss_min"></a>
+            <?php printSocial("_min") ?>
           </header>
 
           <div class="content">
@@ -60,12 +56,7 @@
                   ua.Ut enim ad minim</p>
                 </div>
                 <div class="right_col">
-                  <a target="_blank" href="" class="social_img facebook"></a>
-                  <a target="_blank" href="" class="social_img github"></a>
-                  <a target="_blank" href="" class="social_img linkedin"></a>
-                  <a target="_blank" href="" class="social_img twitter"></a>
-                  <a target="_blank" href="" class="social_img forrst"></a>
-                  <a target="_blank" href="" class="social_img rss"></a>
+                  <?php printSocial("") ?>
                 </div>
                 <div class="clear"></div>
               </div>

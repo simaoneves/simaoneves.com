@@ -1,19 +1,42 @@
+<?php require_once('init.php'); ?>
+<?php
+
+$message = '';
+if (!empty($_POST)) {
+  $name = $_POST["name"];
+  $email = $_POST["email"];
+  $message_form = $_POST["message"];
+
+  if (!empty($name) && !empty($email) && !empty($message_form)) {
+
+    $message_to_send = "Name: " . $name . "<br>";
+    $message_to_send .= "Email: " . $email . "<br>";
+    $message_to_send .= "Message: <br>" . $message_form ;
+    $message_to_send = wordwrap($message_to_send,70);
+
+    // send email
+    if (mail("simaocostaneves@gmail.com","New contact from Site!", $message_to_send)) {
+      $message = 'Your message was sended successfully!<br> Thank you very much, will answer as soon as i can!';
+    }
+    else {
+      $message = "Something went very wrong!";
+    }
+  }
+}
+
+?>
 <?php require 'includes/header.php' ?>
     
   <title>Contact me</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
+  <script src="js/contacts.js"></script>
 
 <?php require 'includes/after_header.php' ?>
 
           <header class="content_header">
             <h1>Contact me</h1>
-            <a target="_blank" href="" class="social_min_img facebook_min"></a>
-            <a target="_blank" href="" class="social_min_img github_min"></a>
-            <a target="_blank" href="" class="social_min_img linkedin_min"></a>
-            <a target="_blank" href="" class="social_min_img twitter_min"></a>
-            <a target="_blank" href="" class="social_min_img forrst_min"></a>
-            <a target="_blank" href="" class="social_min_img rss_min"></a>
+            <?php printSocial("_min") ?>
           </header>
 
           <div class="content">
@@ -30,15 +53,17 @@
                   ua.Ut enim ad minimnsectetur adipisicing elit, sed
                   tempor incididunt ut labore et dolore magna aliq
                   ua.Ut enim ad min</p>
-                  <a target="_blank" href="" class="social_img facebook"></a>
-                  <a target="_blank" href="" class="social_img github"></a>
-                  <a target="_blank" href="" class="social_img linkedin"></a>
-                  <a target="_blank" href="" class="social_img twitter"></a>
-                  <a target="_blank" href="" class="social_img forrst"></a>
-                  <a target="_blank" href="" class="social_img rss"></a>
+                  <?php printSocial("") ?>
                 </div>
                 <div class="right_col">
-                  <form action="">
+                  <?php
+                    if (!empty($message)) {
+                      echo $message;
+                    }
+                    else {
+
+                  ?>
+                  <form action="" onsubmit="return validateForm()" method="post" id="form">
                     <label>Your name:</label>
                     <input id="name" type="text" name="name" class="input_style">
 
@@ -50,6 +75,8 @@
 
                     <input type="submit" class="btn">
                   </form>
+
+                  <?php } // End if ?>
                 </div>
                 <div class="clear"></div>
               </div>

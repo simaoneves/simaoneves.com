@@ -1,3 +1,11 @@
+<?php require_once('init.php'); ?>
+<?php
+  $project = new Project($_GET["project_id"]);
+  if ($project->data()->visible == 0) {
+    Redirect::redirectTo(404);
+  }
+?>
+
 <?php require 'includes/header.php' ?>
 
     <title>Work detail</title>
@@ -14,13 +22,8 @@
 <?php require 'includes/after_header.php' ?>
 
           <header class="content_header">
-            <h1>Work detail</h1>
-            <a target="_blank" href="" class="social_min_img facebook_min"></a>
-            <a target="_blank" href="" class="social_min_img github_min"></a>
-            <a target="_blank" href="" class="social_min_img linkedin_min"></a>
-            <a target="_blank" href="" class="social_min_img twitter_min"></a>
-            <a target="_blank" href="" class="social_min_img forrst_min"></a>
-            <a target="_blank" href="" class="social_min_img rss_min"></a>
+            <h1><?= $project->data()->name ?></h1>
+            <?php printSocial("_min") ?>
           </header>
 
           <div class="content">
@@ -28,10 +31,18 @@
             <div class="one_col section">
               <div class="img_frame relative">
                 <ul class="bxslider">
-                  <li><a href="#"><img src="img/rSXgQ2s.jpg" alt="Simão Neves"></a></li>
-                  <li><a href="#"><img src="img/hhh.jpg" alt="Simão Neves"></a></li>
-                  <li><a href="#"><img src="img/ritasimao.jpg" alt="Simão Neves"></a></li>
-                  <li><a href="#"><img src="img/ritasimao.jpg" alt="Simão Neves"></a></li>
+                  <?php
+
+                    $all_photos_from_project = Project_Photo::getAll($project->data()->id);
+                    foreach ($all_photos_from_project as $current_photo) {
+
+                      // If the project is visible
+                      if ($current_photo->visible == 1) {
+                        echo "<li><img src='backend/uploads/$current_photo->url' alt='$current_photo->keywords'></li>";
+                      }
+                    }
+                    
+                  ?>
                 </ul>
                 <div id="next" class="sliderBtn"></div>
                 <div id="prev" class="sliderBtn"></div>
@@ -39,37 +50,32 @@
             </div>
 
             <div class="double_col section">
-              <h2>I'm Simão Neves</h2>
+              <h2>Info</h2>
               <div class="vert_bar">
                 <div class="left_col">
-                  Lorem ipsum dolor sit amet, consectetur adipis
-                  icing elit, sed do eiusmod tempor incididunt ut la
-                  magna aliqua.Ut enim ad minim.Lorem ipsum dol
-                  or sit amet, consectetur adipisicing elit, sed do eiu
-                  tempor incididunt ut labore et dolore magna aliq
-                  ua.Ut enim ad minimnsectetur adipisicing elit, sed
-                  tempor incididunt ut labore et dolore magna aliq
-                  ua.Ut enim ad minimnsectetur adipisicing elit, se
-                  tempor incididunt ut labore et dolore magna aliq
-                  ua.Ut enim ad minim
+                  <?= $project->data()->description ?>
                   <br><br>
-                  <a href="" target="_blank" class="btn">Visit website</a>
+                  <a href="<?= $project->data()->website ?>" target="_blank" class="btn">Visit website</a>
                 </div>
                 <div class="right_col">
                   <p><b>Job:</b><br>
-                  icing elit, sed do eiusmod tempor incididunt ut la</p>
-
+                  <?= $project->data()->name ?></p>
                   <p><b>Type:</b><br>
-                  Android app</p>
+                  <?= $project->data()->type ?></p>
 
                   <p><b>Date:</b><br>
-                  tempor incididunt ut la</p>
+                  <?= $project->data()->date ?></p>
 
-                  <p><b>Technoloogies used:</b><br>
-                  magna aliqua.Ut enim ad minim.Lorem ipsum dol</p>
+                  <p><b>Technologies used:</b><br>
+                  <?= $project->data()->tech_used ?></p>
 
-                  <p><b>Produced for:</b><br>
-                  or sit amet, consectetur adipisicing elit, sed do eiu</p>
+                  <?php 
+                    if (!$project->data()->produced_for == '') {
+                      echo "<p><b>Produced for:</b><br>";
+                      echo "<a target='_blank' href='" . $project->data()->produced_for . "'>" . $project->data()->produced_for . "</a>";
+                      echo "</p>";
+                    }
+                  ?>
                 </div>
                 <div class="clear"></div>
               </div>

@@ -1,3 +1,4 @@
+<?php require_once('init.php'); ?>
 <?php require 'includes/header.php' ?>
 
   <title>Blog list</title>
@@ -8,12 +9,7 @@
 
           <header class="content_header">
             <h1>Blog list</h1>
-            <a target="_blank" href="" class="social_min_img facebook_min"></a>
-            <a target="_blank" href="" class="social_min_img github_min"></a>
-            <a target="_blank" href="" class="social_min_img linkedin_min"></a>
-            <a target="_blank" href="" class="social_min_img twitter_min"></a>
-            <a target="_blank" href="" class="social_min_img forrst_min"></a>
-            <a target="_blank" href="" class="social_min_img rss_min"></a>
+            <?php printSocial("_min") ?>
           </header>
 
           <div class="content">

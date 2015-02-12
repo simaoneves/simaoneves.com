@@ -13,11 +13,30 @@
           </a>
           <nav>
             <ul class="navigation">
-              <li><a href="index.php">Home</a></li>
-              <li><a href="about_me.php" class="active">About me</a></li>
-              <li><a href="work.php">Work</a></li>
-              <li><a href="blog.php">Blog</a></li>
-              <li><a href="contacts.php">Contact</a></li>
+              
+              <?php
+                $url = new URL();
+                $file = explode('?', $url->getCurrentFolder());
+                $file = $file[0];
+
+                $class = $file == "index.php" ? "class='active'" : '';
+                echo "<li><a $class href='index.php'>Home</a></li>";
+
+                $class = $file == "about_me.php" ? "class='active'" : '';
+                echo "<li><a $class href='about_me.php'>About me</a></li>";
+
+                $class = $file == "work.php" || $file == "work_detail.php" ? "class='active'" : '';
+                echo "<li><a $class href='work.php'>Work</a></li>";
+
+                $class = $file == "blog.php" ? "class='active'" : '';
+                echo "<li><a $class href='blog.php'>Blog</a></li>";
+
+                $class = $file == "contacts.php" ? "class='active'" : '';
+                echo "<li><a $class href='contacts.php'>Contact</a></li>";
+                
+              ?>
+
+              
             </ul>
           </nav>
           <div class="copy">© Copyright <?= getdate()["year"] ?></div>
