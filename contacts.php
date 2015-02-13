@@ -12,7 +12,7 @@ if (!empty($_POST)) {
     $message_to_send = "Name: " . $name . "<br>";
     $message_to_send .= "Email: " . $email . "<br>";
     $message_to_send .= "Message: <br>" . $message_form ;
-    $message_to_send = wordwrap($message_to_send,70);
+    $message_to_send = wordwrap($message_to_send, 70);
 
     // send email
     if (mail("simaocostaneves@gmail.com","New contact from Site!", $message_to_send)) {
@@ -45,14 +45,8 @@ if (!empty($_POST)) {
               <h2>Would love to hear from you</h2>
               <div class="vert_bar">
                 <div class="left_col">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipis
-                  icing elit, sed do eiusmod tempor incididunt ut la
-                  magna aliqua.Ut enim ad minim.Lorem ipsum dol
-                  or sit amet, consectetur adipisicing elit, sed do eiu
-                  tempor incididunt ut labore et dolore magna aliq
-                  ua.Ut enim ad minimnsectetur adipisicing elit, sed
-                  tempor incididunt ut labore et dolore magna aliq
-                  ua.Ut enim ad min</p>
+                  <p>Would you like to recruit me? Catch up on the latest technology trends or just get in touch? Go ahead and fill the form, i’ll answer as soon as i can!<br>
+                  Feel free to check my accounts on Github or Linkedin as well.</p>
                   <?php printSocial("") ?>
                 </div>
                 <div class="right_col">

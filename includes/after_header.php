@@ -16,8 +16,7 @@
               
               <?php
                 $url = new URL();
-                $file = explode('?', $url->getCurrentFolder());
-                $file = $file[0];
+                $file = $url->getCurrentFile();
 
                 $class = $file == "index.php" ? "class='active'" : '';
                 echo "<li><a $class href='index.php'>Home</a></li>";

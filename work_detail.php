@@ -64,7 +64,7 @@
                   <?= $project->data()->type ?></p>
 
                   <p><b>Date:</b><br>
-                  <?= $project->data()->date ?></p>
+                  <?= $project->getDate() ?></p>
 
                   <p><b>Technologies used:</b><br>
                   <?= $project->data()->tech_used ?></p>
